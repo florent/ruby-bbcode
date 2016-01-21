@@ -22,7 +22,6 @@ module RubyBBCode
         :html_open => '<ol>', :html_close => '</ol>',
         :description => 'Ordered list, alternative syntax',
         :example => '[list=1][*]List item[*]Another list item[/list].',
-        :bbcode_close => '[/list]',
         :only_allow => [ "*".to_sym ]},
 
       # Original tags
