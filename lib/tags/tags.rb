@@ -97,12 +97,12 @@ module RubyBBCode
         :quick_param_format_description => 'The URL should start with http:// https://, ftp:// or /, instead of \'%param%\'',
         :param_tokens => [{ :token => :url }]},
       :quote => {
-        :html_open => '<div class="quote">%author%', :html_close => '</div>',
+        :html_open => '<blockquote class="quote" style="margin: 1em 0; padding: 0 0 0 1em; font-style: italic; color: #666; border-left: 1px solid #000;">%author%', :html_close => '</blockquote>',
         :description => 'Quote another person',
         :example => '[quote]BBCode is great[/quote]',
         :allow_quick_param => true, :allow_between_as_param => false,
         :quick_param_format => /(.*)/,
-        :param_tokens => [{:token => :author, :prefix => '<strong>', :postfix => ' wrote:</strong>', :optional => true}]},
+        :param_tokens => [{:token => :author, :prefix => '<strong style="display: block;">', :postfix => ' wrote:</strong> ', :optional => true}]},
       :size => {
         :html_open => '<span style="font-size: %size%px;">', :html_close => '</span>',
         :description => 'Change the size of the text',
